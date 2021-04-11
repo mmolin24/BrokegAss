@@ -1,55 +1,21 @@
 from . import app
 from flask import Flask, render_template, request, redirect, url_for
 
-from flask_wtf import FlaskForm
-from wtforms import StringField
-
-class SearchForm(FlaskForm):
-    search_field = StringField('Username:')
-    
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'])
-def index():
-    search_form = SearchForm()
-
-    if search_form.validate_on_submit():
-        search_data = search_form.search_field.data
-        return redirect(url_for('profile', username=search_data))
-    return render_template('base.html', title="Homepage", search_form=search_form)
+@app.route('/')
+def hello_world():
+    print("sarfas")
+    return render_template('index.html', title="HomePage")
 
 
 @app.route('/about')
 def about():
-    return 'Welcome to my cool Bitcamp project!'
-
-
-users = [
-    {
-        # default constructor1
-        'name': 'Bitcamper',
-        'email': 'hello@bit.camp',
-        'description': 'I love going to Bitcamp!'
-    },
-    {
-        # default constructor2
-        'name': 'nikolay',
-        'email': 'nikolay@bit.camp',
-        'description': "I'm a CS student at UMD!"
-    },
-    {
-        # default constructor3
-        'name': 'Dhanvee',
-        'email': 'dhanvee@umd.edu',
-        'description': "I'm a CS & Math student at UMD!"
-    }
-]
+    return 'Welcome to the world n'
 
 @app.route('/user/<username>')
 def profile(username):
-    user = None
-    for u in users:
-        if u['name'] == username:
-            user = u
-    if not user:
-        user = users[0]
-    return render_template('profile.html', title="{}'s profile page".format(user['name']), user=user)
+    return 'this gas user is {}'.format(username)
+
+@app.route('/feed')
+def feed():
+    return ''
+    
