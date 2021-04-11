@@ -1,9 +1,10 @@
 from . import app
+from flask import Flask, render_template, request, redirect, url_for
 
 @app.route('/')
-@app.route('/index')
 def hello_world():
-    return '<h1>Hello World</h1>'
+    print("sarfas")
+    return render_template('index.html', title="HomePage")
 
 
 @app.route('/about')

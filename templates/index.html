@@ -1,47 +1,55 @@
+<!doctype html>
 
-{% block title %}BrokegAss Application{% endblock %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
- {% block content %}
+  <title>BROKEGASS</title>
+  <meta name="description" content="BROKEGASS">
+  <meta name="author" content="SitePoint">
 
-{% block content %}
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
 
+</head>
 
- <form action ="{{url_for('index')}}>", method = "POST">
-      <!-- First name input --> 
+<body>
+  <h1 style = font-size:40px>BrokeGass Signup</h1>
+
+  <p style = font-size:20px>Fill out the application below in order to receive texts on cheap gas near you!</p>
+  <form >
+    <!-- First and Last name input --> 
+  </div>
+  <div class="input-group">
+    <label for="example-tel-input" style="font-size:20px" class="1h-lg">First and Last Name</label>
+   <input type="text" style="font-size:20px" class="1h-lg" placeholder="First Name" aria-label="firstname">
+   <input type="text" style="font-size:20px" class="1h-lg" placeholder="Last Name" aria-label="firstname">
+ </div> 
+    <!-- Telephone number input -->   
+    <div class="form-group row">
+      <label for="example-tel-input" style="font-size:20px" class="1h-lg">Phone Number</label>
+      <div class="col-10"></div>
+        <input  style="font-size:20px" class="1h-lg" type="tel" placeholder="1-(234)-567-9999" id="example-tel-input">
+      </div>
+    </div>
+    <!-- Gas type input -->
+<label for="exampleFormControlInput1" class="1h-lg">
+    <select style="font-size:20px" class="1h-lg" aria-label=".form-select-lg example">
+      <option style="font-size:20px" selected>Gas Type</option>
+      <option style="font-size:20px" value="Regular">Regular</option>
+      <option style="font-size:20px" value="Mid-Grade">Mid-Grade</option>
+      <option style="font-size:20px" value="Premium">Premium</option>
+    </select>
+    <!-- Zip Code -->
+    <div class="input-group mb-3">
+      <span style="font-size:20px" class="input-group-text" id="inputGroup-sizing-default">Zip Code</span>
+      <input style="font-size:20px" type="text" class="form-control" id="ExampleInputZip" placeholder="12345">
       
-      
-      <!-- Last name input -->
-
-
-      <!-- Telephone number input -->   
-      <div class="form-group row">
-        <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
-        <div class="col-10">
-          <input class="form-control" type="tel" value="1-(000)-000-0000" id="example-tel-input">
-        </div>
-      </div>
-      <!-- Gas type input -->
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">Regular</button>
-        <button type="button" class="btn btn-secondary">Mid-Grade</button>
-        <button type="button" class="btn btn-secondary">Premium</button>
-      </div>
-      <!-- Payment type input -->
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">Cash</button>
-        <button type="button" class="btn btn-secondary">Credit</button>
-        <button type="button" class="btn btn-secondary">Cash/Credit</button>
-      </div>
-      <!-- Color of preview examples -->
-      <div class="form-group row">
-        <label for="example-color-input" class="col-2 col-form-label">Color</label>
-        <div class="col-10">
-          <input class="form-control" type="color" value="#563d7c" id="example-color-input">
-        </div>
-        </div>
-     </div>
-    <form>
+    </div>
+    <!-- Submit Button -->
+    <div class="col-12">
+      <button style="font-size:20px"type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  <form>
+ 
+</body>
 </html>
-<div>
-
-{%  %}

@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, request, redirect, url_for
-from flask_monogoengine import MongoEngine
+# from wtforms_fields import *
+#from flask_monogoengine import MongoEngine
 #from flask_wtf import FlaskForm
 #from wtforms_fields import *
 #from wtforms.validators import DataRequired
@@ -14,11 +15,6 @@ from flask_monogoengine import MongoEngine
 app = Flask(__name__)
 #app.conif['SECRET_KEY']='downbadsquadgg'
  
-#@app.route('/')
-#def index():
-
- #   gas_form = gasUser()
-  # return render_template('index.html',pageTitle ='Welcome to BrokegAss', form=gas_form)
 
 #@app.route('/about')
 #def about()
