@@ -3,7 +3,7 @@ import requests
 from pprint import pprint
 import zipcodes
 
-def nearGasStation(zipCode):
+def nearGasStation(zipCode,fuelType):
     
     validZip = zipcodes.matching(zipCode)
 
@@ -12,8 +12,8 @@ def nearGasStation(zipCode):
         price_elems = ""
         update_elems = ""
     else:      
-        URL = "http://www.baltimoregasprices.com/GasPriceSearch.aspx?fuel=A&qsrch="+ zipCode
-
+       # URL = "http://www.baltimoregasprices.com/GasPriceSearch.aspx?fuel=A&qsrch="+ zipCode
+        URL = "http://www.baltimoregasprices.com/GasPriceSearch.aspx?fuel=" +fuelType+ "&qsrch="+ zipCode    
         response = requests.get(URL)
         soup = BeautifulSoup(response.content, 'html.parser')
         results = soup.find(id='rrlow_0')
@@ -39,7 +39,7 @@ def nearGasStation(zipCode):
 def main():
     zipCodeIn =  input("enter zip code: ")
 
-    gasStation = nearGasStation(zipCodeIn)
+    gasStation = nearGasStation(zipCodeIn,"C")
     print(gasStation)
 
 
