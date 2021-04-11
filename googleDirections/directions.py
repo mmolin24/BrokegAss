@@ -1,5 +1,3 @@
-
-
 def hyperLink(address):
     if(address[0] == '&'):
         return "sad"
@@ -14,11 +12,3 @@ def hyperLink(address):
     hyperLinkCreated = "https://www.google.com/maps/dir/?api=1&origin=Your+location&destination=" + stringDirection + "&travelmode=driving"
 
     return hyperLinkCreated
-
-def main():
-
-    address = "9320 frostburg way"
-    hyperLinkFound = hyperLink(address)
-    print(hyperLinkFound)
-
-main()

@@ -12,43 +12,41 @@
 
 </head>
 
-<body>
+<body> 
+  
   <h1 style = font-size:40px>BrokeGass Signup</h1>
 
   <p style = font-size:20px>Fill out the application below in order to receive texts on cheap gas near you!</p>
-  <form >
-    <!-- First and Last name input --> 
-  </div>
-  <div class="input-group">
-    <label for="example-tel-input" style="font-size:20px" class="1h-lg">First and Last Name</label>
-   <input type="text" style="font-size:20px" class="1h-lg" placeholder="First Name" aria-label="firstname">
-   <input type="text" style="font-size:20px" class="1h-lg" placeholder="Last Name" aria-label="firstname">
- </div> 
+  <form method="POST" action="/" span class="border border-3"></span>
+
     <!-- Telephone number input -->   
     <div class="form-group row">
-      <label for="example-tel-input" style="font-size:20px" class="1h-lg">Phone Number</label>
+      {{ form.phone_number }}
+      <label for="example-tel-input" style="font-size:20px"  style="line-height:3" class="1h-lg">Phone Number</label>
       <div class="col-10"></div>
-        <input  style="font-size:20px" class="1h-lg" type="tel" placeholder="1-(234)-567-9999" id="example-tel-input">
+        <input  style="font-size:20px"  style="line-height:3" class="1h-lg" type="tel" placeholder="1-(234)-567-9999" id="example-tel-input" >
       </div>
     </div>
     <!-- Gas type input -->
 <label for="exampleFormControlInput1" class="1h-lg">
-    <select style="font-size:20px" class="1h-lg" aria-label=".form-select-lg example">
-      <option style="font-size:20px" selected>Gas Type</option>
-      <option style="font-size:20px" value="Regular">Regular</option>
+  {{ form.fuel_type }}
+    <select style="font-size:20px"  style="line-height:3" class="1h-lg" aria-label=".form-select-lg example" >
+      <option style="font-size:20px" selected>Regular</option>
       <option style="font-size:20px" value="Mid-Grade">Mid-Grade</option>
       <option style="font-size:20px" value="Premium">Premium</option>
     </select>
     <!-- Zip Code -->
     <div class="input-group mb-3">
-      <span style="font-size:20px" class="input-group-text" id="inputGroup-sizing-default">Zip Code</span>
-      <input style="font-size:20px" type="text" class="form-control" id="ExampleInputZip" placeholder="12345">
-      
+      {{ form.zip_code }}
+      <span style="font-size:20px"  style="line-height:3" class="input-group-text" id="inputGroup-sizing-default">Zip Code</span>
+      <input style="font-size:20px"  style="line-height:3" type="text" class="form-control" id="ExampleInputZip" placeholder="12345" >
     </div>
     <!-- Submit Button -->
     <div class="col-12">
-      <button style="font-size:20px"type="submit" class="btn btn-primary">Submit</button>
+      {{ form.submit() }}
+      <button style="font-size:20px"  style="line-height:3" type="submit" class="btn btn-primary">Submit</button>
     </div>
+    
   <form>
  
 </body>
