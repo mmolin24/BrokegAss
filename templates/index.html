@@ -8,45 +8,41 @@
   <meta name="description" content="BROKEGASS">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
 </head>
 
 <body> 
-  
+
   <h1 style = font-size:40px>BrokeGass Signup</h1>
 
   <p style = font-size:20px>Fill out the application below in order to receive texts on cheap gas near you!</p>
   <form method="POST" action="/" span class="border border-3"></span>
 
-    <!-- Telephone number input -->   
+    <!-- Telephone number input -->
     <div class="form-group row">
-      {{ form.phone_number }}
       <label for="example-tel-input" style="font-size:20px"  style="line-height:3" class="1h-lg">Phone Number</label>
       <div class="col-10"></div>
-        <input  style="font-size:20px"  style="line-height:3" class="1h-lg" type="tel" placeholder="1-(234)-567-9999" id="example-tel-input" >
+      {{ form.phone_number }}
       </div>
     </div>
     <!-- Gas type input -->
-<label for="exampleFormControlInput1" class="1h-lg">
-  {{ form.fuel_type }}
-    <select style="font-size:20px"  style="line-height:3" class="1h-lg" aria-label=".form-select-lg example" >
-      <option style="font-size:20px" selected>Regular</option>
-      <option style="font-size:20px" value="Mid-Grade">Mid-Grade</option>
-      <option style="font-size:20px" value="Premium">Premium</option>
-    </select>
+    <div class="form-group row">
+      <label for="example-tel-input" style="font-size:20px"  style="line-height:3" class="1h-lg">Gas Type (Regular, Mid-Grade, Premium, or Diesel)</label>
+      <div class="col-10"></div>
+      {{ form.fuel_type }}
+      </div>
+    </div>
     <!-- Zip Code -->
-    <div class="input-group mb-3">
+    <div class="form-group row">
+      <label for="example-tel-input" style="font-size:20px"  style="line-height:3" class="1h-lg">Zip Code</label>
+      <div class="col-10"></div>
       {{ form.zip_code }}
-      <span style="font-size:20px"  style="line-height:3" class="input-group-text" id="inputGroup-sizing-default">Zip Code</span>
-      <input style="font-size:20px"  style="line-height:3" type="text" class="form-control" id="ExampleInputZip" placeholder="12345" >
+      </div>
     </div>
     <!-- Submit Button -->
     <div class="col-12">
       {{ form.submit() }}
-      <button style="font-size:20px"  style="line-height:3" type="submit" class="btn btn-primary">Submit</button>
     </div>
-    
+
   <form>
  
 </body>
