@@ -4,6 +4,7 @@ from pprint import pprint
 import zipcodes
 
 def nearGasStation(zipCode):
+    
     validZip = zipcodes.matching(zipCode)
     stringGas = "No available gas near you"
 
@@ -20,10 +21,16 @@ def nearGasStation(zipCode):
             address_elems = results.find('dl',class_='address')
             price_elems = results.find('div',class_='price_num')
             update_elems = results.find('div',class_='tm')
-
             stringGas = address_elems.text.strip() + '\n' + price_elems.text.strip() + '\n' + update_elems.text.strip()
 
-    return stringGas
+    station ={
+        "address": address_elems, 
+        "price": 
+        "update":
+        ""
+    } 
+
+    return station
 
 def main():
     zipCodeIn =  input("enter zip code: ")
