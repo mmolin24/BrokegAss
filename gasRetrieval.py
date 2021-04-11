@@ -9,7 +9,7 @@ def nearGasStation(zipCode,fuelType):
 
     # check if the zip code is available, if not set dummy values
     if len(validZip) == 0:
-        address_elems = "zip code not valid!"
+        address_elems = "2 zip code not valid!"
         price_elems = ""
         update_elems = ""
     else:      
@@ -27,7 +27,7 @@ def nearGasStation(zipCode,fuelType):
         
         # if there's no gas stations in the area set it.
         else:
-            address_elems = "No available gas stations near you!"
+            address_elems = "& No available gas stations near you!"
             price_elems = ""
             update_elems = ""
 
