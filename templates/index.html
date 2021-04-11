@@ -21,7 +21,7 @@
 
     <!-- Telephone number input -->   
     <div class="form-group row">
-      {{ form.phone }}
+      {{ form.phone_number }}
       <label for="example-tel-input" style="font-size:20px"  style="line-height:3" class="1h-lg">Phone Number</label>
       <div class="col-10"></div>
         <input  style="font-size:20px"  style="line-height:3" class="1h-lg" type="tel" placeholder="1-(234)-567-9999" id="example-tel-input" >
@@ -29,7 +29,7 @@
     </div>
     <!-- Gas type input -->
 <label for="exampleFormControlInput1" class="1h-lg">
-  {{ form.gasType }}
+  {{ form.fuel_type }}
     <select style="font-size:20px"  style="line-height:3" class="1h-lg" aria-label=".form-select-lg example" >
       <option style="font-size:20px" selected>Regular</option>
       <option style="font-size:20px" value="Mid-Grade">Mid-Grade</option>
@@ -37,7 +37,7 @@
     </select>
     <!-- Zip Code -->
     <div class="input-group mb-3">
-      {{ form.zip }}
+      {{ form.zip_code }}
       <span style="font-size:20px"  style="line-height:3" class="input-group-text" id="inputGroup-sizing-default">Zip Code</span>
       <input style="font-size:20px"  style="line-height:3" type="text" class="form-control" id="ExampleInputZip" placeholder="12345" >
     </div>
