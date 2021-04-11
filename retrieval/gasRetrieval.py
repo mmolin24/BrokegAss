@@ -6,10 +6,11 @@ import zipcodes
 def nearGasStation(zipCode):
     
     validZip = zipcodes.matching(zipCode)
-    stringGas = "No available gas near you"
 
     if len(validZip) == 0:
-        print("zip does not exist!")
+        address_elems = "zip code not valid"
+        price_elems = ""
+        update_elems = ""
     else:      
         URL = "http://www.baltimoregasprices.com/GasPriceSearch.aspx?fuel=A&qsrch="+ zipCode
 
@@ -18,16 +19,19 @@ def nearGasStation(zipCode):
         results = soup.find(id='rrlow_0')
 
         if results is not None:
-            address_elems = results.find('dl',class_='address')
-            price_elems = results.find('div',class_='price_num')
-            update_elems = results.find('div',class_='tm')
-            stringGas = address_elems.text.strip() + '\n' + price_elems.text.strip() + '\n' + update_elems.text.strip()
+            address_elems = results.find('dl',class_='address').text.strip()
+            price_elems = results.find('div',class_='price_num').text.strip()
+            update_elems = results.find('div',class_='tm').text.strip()
+        
+        else:
+            address_elems = "No available gas stations near you!"
+            price_elems = ""
+            update_elems = ""
 
     station ={
-        "address": address_elems, 
-        "price": 
-        "update":
-        ""
+        "address": address_elems,
+        "price": price_elems,
+        "update": update_elems,
     } 
 
     return station
